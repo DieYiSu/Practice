@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include block/head.pug
+    body
+        .wrap
+            include block/header.pug
+            .main 
+                .register
+                    h2  六角西餐廳
+                    h3 享受美食好味道
+                    form
+                        h3  REGISTER
+                        .form-div.flex
+                            .policy
+                                p
+                                    | 就是這樣條款 :
+                                    | <br>
+                                    | Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien...
+                            .form.flex
+                                label(for="stactked-email") Email Address*
+                                .input-group.flex.email
+                                    <i class="far fa-envelope"></i>
+                                    input(type="email")
+                                label(for="stacked-password") Password*
+                                .input-group.flex.password
+                                    <i class="fas fa-unlock-alt"></i>
+                                    input(type="password")
+                                .input-group.flex
+                                    <i class="fas fa-unlock-alt"></i>
+                                    input(type="password")
+                                a(href="") 已經有帳號了？
+
+                                .button.flex
+                                    button(type="submit").btn.btn-submit 註冊
+
+            include block/footer.pug

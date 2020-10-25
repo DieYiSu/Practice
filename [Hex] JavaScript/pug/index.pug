@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="./index.css")
+        link(rel="stylesheet", href="./reset.css")
+    body
+        .header
+            .logo
+                img(src="../pic/BMICLogo.png", alt="#")
+            ul.input
+                li
+                    label(for="height-input") 身高 cm
+                    input(type="text" placeholder="請輸入身高").input-field#height-input
+                li
+                    label(for="weight-input") 體重 Kg
+                    input(type="text" placeholder="請輸入體重").input-field#weight-input
+            .button
+                button.generate-result-button 看結果
+                //- button.result 
+                //-     span.result-value 20.90
+                //-     br
+                //-     span.result-description BMI
+                //- button.reset-button
+                //-     img(src="../pic/icons_loop.png", alt="")
+            //- h2.header-result-description.header-result-description-Overweight  重度肥胖
+        .main-content
+            h2  BMI紀錄
+            ul.result
+                li.result-card.result-card-Normal
+                    h3 理想
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+                li.result-card.result-card-Underweight
+                    h3 過輕
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+                li.result-card.result-card-Overweight
+                    h3 過重
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+                li.result-card.result-card-Moderately-obese
+                    h3 輕度肥胖
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+                li.result-card.result-card-Severely-obese
+                    h3 中度肥胖
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+                li.result-card.result-card-Very-severely-obese
+                    h3 重度肥胖
+                    ul.result-card-param
+                        li
+                            p.result-card-param-description BMI
+                            p.result-card-param-value 20.90
+                        li
+                            p.result-card-param-description weight
+                            p.result-card-param-value 70kg
+                        li
+                            p.result-card-param-description height
+                            p.result-card-param-value 180cm
+                    p.date 06-19-2017
+
+        .footer
+                img(src="../pic/BMICLogo.png", alt="#")
+        script(src="index.dev.js")

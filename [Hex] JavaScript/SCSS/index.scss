@@ -1,0 +1,213 @@
+// var
+// $None: #424242;
+$Normal: #86D73F;
+$Underweight: #31BAF9;
+$Overweight: #FF982D;
+$Moderately-obese: #FF6C03;
+$Severely-obese: #FF6C03;
+$Very-severely-obese: #FF1200;
+
+// main
+.header {
+    height: 300px;
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+        margin-right: 97px;
+    }
+    .input {
+        margin-right: 53px;
+        li {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 23px;
+            label {
+                font-size: 18px;
+                color: #FFD366;
+                margin-bottom: 7px;
+            }
+            .input-field {
+                background: rgba(255,255,255,0.18);
+                border: 2px solid #FFD366;
+                border-radius: 10px;
+                width: 250px;
+                height: 40px;
+                padding: 8px 0px 8px 16px;
+                &::placeholder{
+                    font-size: 24px;
+                    color: rgba(255,255,255,0.50);
+                }
+            }
+        }
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        button.generate-result-button {
+            background: #FFD366;
+            width: 120px;
+            height: 120px;
+            border: 0px;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #424242;
+            margin-right: 18px;
+            &:hover {
+                background: #FFD366;
+                box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+            }
+            &:active {
+                background: #DEA821;
+                
+            }
+        }
+        button.reset-button {
+            position: absolute;
+            bottom: 0px;
+            right: 30px;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #86D73F;
+            border: 3px solid #424242;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(0deg);
+            transition: all .3s;
+            img {
+                width: 14px;
+                height: 19px;
+            }
+            &:hover {
+                transform: rotate(-360deg);
+                transition: all .3s;
+            }
+            &:active {
+                transform: rotate(-3600deg);
+                transition: all 3s;
+            }
+        }
+        button.result {
+            width: 123px;
+            height: 123px;
+            background: #424242;
+            border: 6px solid #86D73F;
+            border-radius: 50%;
+            margin-right: 18px;
+            .result-value {
+                font-size: 28px;
+                color: #86D73F;
+                margin-bottom: 4px;
+            }
+            .result-description {
+                font-size: 14px;
+                color: #86D73F;
+            }
+        }
+    }
+    .header-result-description {
+        font-size: 32px;
+        // color: #86D73F;
+    }
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 48px;
+    padding-bottom: 74px;
+    background-color: #e9e6e6;
+    h2 {
+        font-size: 24px;
+        color: #424242;
+        margin-bottom: 36px;
+    }
+    .result {
+        .result-card {
+            display: flex;
+            align-items: center;
+            width: 624px;
+            height: 62px;
+            padding-left: 12px;
+            margin-bottom: 16px;
+            background-color: rgb(243, 243, 243);
+            h3 {
+                font-size: 20px;
+                color: #4A4A4A;
+            }
+            .result-card-param {
+                display: flex;
+                margin-right: 52px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 42px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    
+                    .result-card-param-description {
+                        font-size: 12px;
+                        color: #424242;
+                        margin-right: 7px;
+                    }
+                    .result-card-param-value {
+                        font-size: 20px;
+                        color: #4A4A4A;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// color
+.result-card-Normal { border-left: 7px solid $Normal }
+.result-card-Underweight { border-left: 7px solid $Underweight }
+.result-card-Overweight { border-left: 7px solid $Overweight }
+.result-card-Moderately-obese { border-left: 7px solid $Moderately-obese }
+.result-card-Severely-obese { border-left: 7px solid $Severely-obese }
+.result-card-Very-severely-obese { border-left: 7px solid $Very-severely-obese }
+
+// h3 size adjust
+
+.result-card-Normal, 
+.result-card-Underweight,
+.result-card-Overweight {
+    h3 {
+        margin-right: 70px;
+    }
+}
+.result-card-Moderately-obese,
+.result-card-Severely-obese,
+.result-card-Very-severely-obese {
+    h3 {
+        margin-right: 30px;
+    }
+}
+
+.footer {
+    display: flex;
+    height: 90px;
+    background: #FFD366;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 55px;
+        height: 55px;
+        filter:grayscale(100%);
+    }
+}
+
+// .header-result-description-None {color: $None}
+.header-result-description-Normal {color: $Normal}
+.header-result-description-Underweight {color: $Underweight}
+.header-result-description-Overweight {color:$Overweight}
+.header-result-description-Moderately-obese  {color:$Moderately-obese}
+.header-result-description-Severely-obese {color:$Severely-obese}
+.header-result-description-Very-severely-obese  {color:$Very-severely-obese}

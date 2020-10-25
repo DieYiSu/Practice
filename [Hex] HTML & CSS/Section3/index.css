@@ -1,0 +1,22 @@
+h1 {
+    color: blue;
+}
+p {
+    margin-left: 30px;
+}
+p > a:hover {
+    color: red;
+}
+h2 {
+    border-left: 5px solid red;
+    border-bottom: 5px solid red;
+}
+li {
+    line-height: 20px;
+}
+.text-decoration {
+    text-decoration: line-through;
+}
+img {
+    border: 5px solid gray;
+}

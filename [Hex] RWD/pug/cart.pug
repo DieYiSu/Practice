@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include block/head.pug
+    body
+        .wrap
+            include block/header.pug
+            .purchase.flex
+                .sidebar.flex
+                    .sidebar-title.flex
+                        <i class="fas fa-leaf"></i>
+                        h2 線上訂購美食
+                    ul
+                        li
+                            a(href="cart.html") 全部 (23)
+                        li
+                            a(href="cart.html") 只愛吃薯條 (18)
+                        li
+                            a(href="cart.html") 加熱就可食 (1)
+                        li.buger
+                            a(href="cart.html") 不敗漢堡系列 (4)
+                .purchase-content
+                    .purchase-content-header.flex
+                        .search-bar.flex
+                            input(type="text")
+                            button
+                                <i class="fas fa-search"></i>
+                        ul.flex
+                            li
+                                a(href="cart.html") 結帳去
+                            li
+                                a(href="cart.html")
+                                    <i class="fas fa-shopping-cart">
+                                        span 1
+                                    </i>
+                                        
+                    ul.purchase-item.flex
+                        li.purchase-card
+                            .item-pic.popular.product-1
+                                <i class="far fa-heart"></i>
+                                p 熱銷美食
+                            .item-description
+                                h3 經典漢堡套餐
+                                p.item-eng-name Classic Hamburger Package
+                                hr
+                                p.item-price $120 
+                                button
+                                    | <i class="fas fa-shopping-cart"></i>
+                                    | 加入購物車
+                        li.purchase-card
+                            .item-pic.product-2
+                                <i class="far fa-heart"></i>
+                            .item-description
+                                h3 英俊香腸
+                                p.item-eng-name Handsome Sausage
+                                hr
+                                p.item-price $1,024 
+                                button
+                                    | <i class="fas fa-shopping-cart"></i>
+                                    | 加入購物車
+                        li.purchase-card
+                            .item-pic.product-3
+                                <i class="far fa-heart"></i>
+                            .item-description
+                                h3 漢堡兄弟
+                                p.item-eng-name Hamburg Brothers
+                                hr
+                                p.item-price $792 
+                                button
+                                    | <i class="fas fa-shopping-cart"></i>
+                                    | 加入購物車
+                        li.purchase-card
+                            .item-pic.product-4
+                                <i class="far fa-heart"></i>
+                            .item-description
+                                h3 完美願望
+                                p.item-eng-name Dragon Ball Package
+                                hr
+                                p.item-price $999,999
+                                button
+                                    | <i class="fas fa-shopping-cart"></i>
+                                    | 加入購物車
+            include block/footer.pug

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include block/head.pug
+    body
+        .wrap
+            include block/header.pug
+            .main 
+                .login
+                    h2  六角西餐廳
+                    h3 享受美食好味道
+                    form
+                        h3  LOGIN
+                        label(for="stactked-email") Email Address*
+                        .input-group.flex.email
+                            <i class="far fa-envelope"></i>
+                            input(type="email")
+                        label(for="stacked-password") Password*
+                        .input-group.flex
+                            <i class="fas fa-unlock-alt"></i>
+                            input(type="password")
+                        a(href="login.html") 忘記密碼？
+
+                        .button.flex
+                            button(type="submit").btn.btn-register 註冊 
+                            button(type="submit").btn.btn-submit 登入
+
+            include block/footer.pug
