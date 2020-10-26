@@ -5,7 +5,7 @@ const weightInputValue = document.querySelector('#weight-input');
 function generateResultButtonClick() {
   console.log('test');
   console.log(heightInputValue.value);
-  console.log(weightInputValue);
+  console.log(weightInputValue.value);
 }
 
 generateResultButton.addEventListener(
