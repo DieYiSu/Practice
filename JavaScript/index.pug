@@ -19,13 +19,13 @@ html(lang="en")
                     input(type="text" placeholder="請輸入體重").input-field#weight-input
             .button
                 button.generate-result-button 看結果
-                //- button.result 
-                //-     span.result-value 20.90
-                //-     br
-                //-     span.result-description BMI
-                //- button.reset-button
-                //-     img(src="../pic/icons_loop.png", alt="")
-            //- h2.header-result-description.header-result-description-Overweight  重度肥胖
+                button.result.displayNone
+                    span.result-value 20.90
+                    br
+                    span.result-description BMI
+                button.resetButton.displayNone
+                    img(src="../pic/icons_loop.png", alt="")
+            h2.header-result-description.header-result-description-Overweight.displayNone  重度肥胖
         .main-content
             h2  BMI紀錄
             ul.result

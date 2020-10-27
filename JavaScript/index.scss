@@ -65,11 +65,10 @@ $Very-severely-obese: #FF1200;
                 
             }
         }
-        button.reset-button {
+        button.resetButton {
             position: absolute;
             bottom: 0px;
             right: 30px;
-            display: flex;
             width: 30px;
             height: 30px;
             border-radius: 50%;
@@ -110,7 +109,7 @@ $Very-severely-obese: #FF1200;
             }
         }
     }
-    .header-result-description {
+    .headerResultDescription {
         font-size: 32px;
         // color: #86D73F;
     }
@@ -211,3 +210,10 @@ $Very-severely-obese: #FF1200;
 .header-result-description-Moderately-obese  {color:$Moderately-obese}
 .header-result-description-Severely-obese {color:$Severely-obese}
 .header-result-description-Very-severely-obese  {color:$Very-severely-obese}
+
+.displayNone {
+    display: none;
+}
+.flex {
+    display: flex;
+}
