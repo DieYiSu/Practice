@@ -1,8 +1,7 @@
 // ESLint+prettier: Airbnb-coding-style
 
 // todo
-// view - result card
-// value - input value check
+// cleanHistoryButton
 
 const generateResultButton = document.querySelector('.generateResultButton');
 const buttonResult = document.querySelector('.resultCircle');
@@ -19,6 +18,14 @@ const resultCircle = document.querySelector('.resultCircle');
 function setLocalStorage(bmiObject) {
   getLocalStorage.push(bmiObject);
   localStorage.setItem('bmiObject', JSON.stringify(getLocalStorage));
+}
+
+function resetButton() {
+  generateResultButton.classList.remove('displayNone');
+  buttonResult.classList.add('displayNone');
+  buttonResetButton.classList.add('displayNone');
+  buttonResetButton.classList.remove('flex');
+  headerResultDescription.classList.add('displayNone');
 }
 
 function BmiDetermination(BMIresultValue) {
@@ -50,6 +57,13 @@ function createEmyptAlert() {
     <h3 class="emptyAlert">快去測量BMI！</h3>
   `;
   ulResult.innerHTML = ulResultString;
+}
+
+function cleanHistory() {
+  localStorage.removeItem('bmiObject');
+  resetButton();
+  createEmyptAlert();
+  getLocalStorage.length = 0;
 }
 
 function createCard() {
@@ -191,40 +205,59 @@ function createCard() {
       // no default
     }
   });
+
+  ulResultString += `<button class="cleanHistory">一鍵刪除歷史紀錄</button>`;
   ulResult.innerHTML = ulResultString;
+
+  const cleanHistoryButton = document.querySelector('.cleanHistory');
+  console.log(cleanHistoryButton);
+  cleanHistoryButton.addEventListener('click', cleanHistory, false);
 }
 
 function headerCircleSetting(BmiDeterminationDescription) {
   switch (BmiDeterminationDescription) {
     case '理想':
       headerResultDescription.innerHTML = `理想`;
-      // eslint-disable-next-line no-undef
-      // eslint-disable-next-line dot-notation
-      headerResultDescription.style['color'] = '#86D73F';
-      console.log(buttonResetButton);
+      headerResultDescription.style.color = '#86D73F';
+      resultCircle.style.border = '6px solid #86D73F';
+      resultCircle.style.color = '#86D73F';
+      buttonResetButton.style.background = '#86D73F';
 
       break;
     case '過輕':
       headerResultDescription.innerHTML = `過輕`;
-      headerResultDescription.style.color = '#86D73F';
+      headerResultDescription.style.color = '#31BAF9';
+      resultCircle.style.border = '6px solid #31BAF9';
+      resultCircle.style.color = '#31BAF9';
+      buttonResetButton.style.background = '#31BAF9';
       break;
     case '過重':
       headerResultDescription.innerHTML = `過重`;
-      headerResultDescription.style.color = '#86D73F';
+      headerResultDescription.style.color = '#FF982D';
+      resultCircle.style.border = '6px solid #FF982D';
+      resultCircle.style.color = '#FF982D';
+      buttonResetButton.style.background = '#FF982D';
       break;
     case '輕度肥胖':
       headerResultDescription.innerHTML = `輕度肥胖`;
-      headerResultDescription.style.color = '#86D73F';
+      headerResultDescription.style.color = '#FF6C03';
+      resultCircle.style.border = '6px solid #FF6C03';
+      resultCircle.style.color = '#FF6C03';
+      buttonResetButton.style.background = '#FF6C03';
       break;
     case '中度肥胖':
       headerResultDescription.innerHTML = `中度肥胖`;
-      headerResultDescription.style.color = '#86D73F';
+      headerResultDescription.style.color = '#FF6C03';
+      resultCircle.style.border = '6px solid #FF6C03';
+      resultCircle.style.color = '#FF6C03';
+      buttonResetButton.style.background = '#FF6C03';
       break;
     case '重度肥胖':
       headerResultDescription.innerHTML = `重度肥胖`;
-      // console.log(headerResultDescription.style);
-      headerResultDescription.style.color = '#86D73F';
-      // console.log(buttonResetButton.style.background);
+      headerResultDescription.style.color = '#FF1200';
+      resultCircle.style.border = '6px solid #FF1200';
+      resultCircle.style.color = '#FF1200';
+      buttonResetButton.style.background = '#FF1200';
       break;
     // no default
   }
@@ -261,14 +294,6 @@ function generateResultButtonClick() {
   setLocalStorage(bmiObject);
   headerCircleSetting(BmiDeterminationDescription);
   createCard();
-}
-
-function resetButton() {
-  generateResultButton.classList.remove('displayNone');
-  buttonResult.classList.add('displayNone');
-  buttonResetButton.classList.add('displayNone');
-  buttonResetButton.classList.remove('flex');
-  headerResultDescription.classList.add('displayNone');
 }
 
 window.addEventListener(

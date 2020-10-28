@@ -163,6 +163,20 @@ $Very-severely-obese: #FF1200;
             }
         }
     }
+    .cleanHistory {
+        width: 200px;
+        height: 40px;
+        border: 0px;
+        font-size: 16px;
+        border-radius: 5%;
+        color: #424242;
+        &:hover{
+            background-color: #42424288;
+        }
+        &:active {
+            background-color: #4242423f;
+        }
+    }
 }
 
 // color
