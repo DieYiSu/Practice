@@ -47,7 +47,7 @@ $Very-severely-obese: #FF1200;
         justify-content: center;
         align-items: center;
         position: relative;
-        button.generate-result-button {
+        .generateResultButton {
             background: #FFD366;
             width: 120px;
             height: 120px;
@@ -72,7 +72,7 @@ $Very-severely-obese: #FF1200;
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            background: #86D73F;
+            background: $Normal;
             border: 3px solid #424242;
             justify-content: center;
             align-items: center;
@@ -91,27 +91,27 @@ $Very-severely-obese: #FF1200;
                 transition: all 3s;
             }
         }
-        button.result {
+        button.resultCircle {
             width: 123px;
             height: 123px;
             background: #424242;
-            border: 6px solid #86D73F;
+            border: 6px solid $Normal;
+            color: $Normal;
             border-radius: 50%;
             margin-right: 18px;
-            .result-value {
+            
+            .resultCircleValue {
                 font-size: 28px;
-                color: #86D73F;
                 margin-bottom: 4px;
             }
-            .result-description {
+            .resultCirclevalueDescription {
                 font-size: 14px;
-                color: #86D73F;
             }
         }
     }
     .headerResultDescription {
         font-size: 32px;
-        // color: #86D73F;
+        color: $Overweight;
     }
 }
 .main-content {
@@ -121,7 +121,7 @@ $Very-severely-obese: #FF1200;
     padding-top: 48px;
     padding-bottom: 74px;
     background-color: #e9e6e6;
-    h2 {
+    h2, .emptyAlert {
         font-size: 24px;
         color: #424242;
         margin-bottom: 36px;
