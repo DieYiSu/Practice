@@ -27,7 +27,7 @@ you can easily find what resource you need on this roadmap :)
 
 ## JavaScript
 
-### BMI Calculator
+- BMI Calculator
 
 ## RWD
 
