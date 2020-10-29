@@ -1,7 +1,7 @@
 // ESLint+prettier: Airbnb-coding-style
 
 // todo
-// cleanHistoryButton
+// adjust the button outline
 
 const generateResultButton = document.querySelector('.generateResultButton');
 const buttonResult = document.querySelector('.resultCircle');
