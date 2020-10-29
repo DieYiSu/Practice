@@ -28,6 +28,8 @@ you can easily find what resource you need on this roadmap :)
 ## JavaScript
 
 - BMI Calculator
+  - [Live Demo](https://dieyisu.github.io/Practice/JavaScript/dist/index.html)
+  - [BMI Calulcaor Wiki](https://github.com/DieYiSu/Practice/wiki/JavaScript-BMI-Calculator)
 
 ## RWD
 
