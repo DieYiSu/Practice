@@ -23,6 +23,12 @@ https://github.com/kamranahmedse/developer-roadmap
 
 you can easily find what resource you need on this roadmap :)
 
+# Learning Notes
+
+I use this repo's issue function to record my learning notes, if you're interesting what I learning now, click the link or issue tab to see :)
+
+[Learning Notes](https://github.com/DieYiSu/Practice/issues)
+
 # Side-Project
 
 ## JavaScript
