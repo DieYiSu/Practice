@@ -74,27 +74,68 @@ class DoublyLinkedList {
             }
             current = current.next;
             count++;
-
-            //   current = current.next;
-            //   if (count == index) {
-            //     newNode.previous = current.previous;
-            //     current.previous.next = newNode;
-            //     newNode.next = current;
-            //     current.previous = newNode;
-            //   }
-            //   count++;
         }
         return;
     }
 
-    // Get at index
-
     // remove at index
+    remove(value){
+        // still need to do it by myself
+
+        // if the dll is empty, return it.
+        if(!this.head){ 
+            return
+        }
+
+        let currentNode = this.head;
+        let removeNode = null;
+
+        while(currentNode){
+            if(currentNode.data == value){
+                removeNode = currentNode;
+
+                if(removeNode === this.head){
+                    // if HEAD is going to be removed
+                    this.head = removeNode.next;
+                    
+                    if(this.head){
+                        this.head.previous = null;
+                    }
+                    
+                    if(removeNode === this.tail){
+                        this.tail = null;
+                    }
+                } else if (removeNode === this.tail){
+                    // if tail is going to be removed
+
+                    this.tail = removeNode.previous;
+                    this.tail.next = null;
+                } else {
+                    // if middle node is going to be removed
+
+                    const previousNode = removeNode.previous;
+                    const nextNode = removeNode.next;
+
+                    previousNode.next = nextNode;
+                    nextNode.previous = previousNode;
+                }
+            }
+            currentNode = currentNode.next;
+        }
+    }
 
     // Clear the list
+    cleanList(){
+        this.head = null;
+        this.tail = null;
+    }
 
     // printData
     printListData() {
+        if(this.head === null && this.tail === null){
+            console.log('Dll is empty');
+        }
+
         let current = this.head;
         while (current) {
             console.log(current.data);
@@ -111,7 +152,9 @@ dll.Prepend(200);
 dll.Prepend(300);
 // dll.Append(300);
 
-dll.AppendAt(3, 400);
+// dll.AppendAt(3, 400);
+// dll.remove(300);
+dll.cleanList();
 
 dll.printListData();
 // console.log(dll.size)
