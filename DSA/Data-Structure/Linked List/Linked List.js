@@ -116,7 +116,6 @@ class LinkedList {
             console.log(current.data);
             current = current.next;
         }
-        console.log('========');
     }
 }
 
