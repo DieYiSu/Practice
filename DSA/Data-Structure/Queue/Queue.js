@@ -35,7 +35,7 @@ class Queue {
     }
 
     deQueue(){
-        this.head ? this.head = this.head.next : console.log(`Queue is empty`);
+        this.head ? this.head = this.head.next : null;
     }
 
     printQueue(){
@@ -52,14 +52,14 @@ const queue = new Queue;
 
 // queue.isEmpty()
 
-// queue.enQueue(100);
-// queue.enQueue(200);
-// queue.enQueue(300);
+queue.enQueue(100);
+queue.enQueue(200);
+queue.enQueue(300);
 // queue.deQueue();
 // queue.deQueue();
 // queue.deQueue();
 // queue.deQueue();
 
-// queue.printQueue();
+queue.printQueue();
 
 
